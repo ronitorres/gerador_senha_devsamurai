@@ -39,7 +39,9 @@
                     password += chars.substring(randomNumber, randomNumber + 1);
                 }
 
-               
+                //recuperando o valor do objeto
+                const inputEl = document.querySelector("#password");
+                inputEl.value = password;
 
                 console.log(password);
             }
