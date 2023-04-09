@@ -17,7 +17,7 @@
         type="range" 
         name="password-lenght" 
         id="password-lenght" 
-        value="16"
+        value="16" 
         min="4" 
         max="64">
 
@@ -28,13 +28,16 @@
         <button>Copiar senha</button>
 
         <script>
+
+            let passwordLenght = 16;        // Variavel declarada no escopo global com o valor padrão
+
             function generatePassword() {
                 const chars = 
                 "abcdefghjklmnpqrstuvwxyzABCDEFGHJKLMNPQRSTUVWXYZ123456789?!@&*()[]";
                  
                 let password = "";
 
-                for (let i = 0; i < 8; i++){
+                for (let i = 0; i < passwordLenght; i++){
                     const randomNumber = Math.floor(Math.random() * chars.length);             
                     password += chars.substring(randomNumber, randomNumber + 1);
                 }
@@ -45,13 +48,16 @@
 
                 //
 
-                console.log(password);
+                //console.log(password);
             }
 
             const passwordLenghtEl = document.querySelector("#password-lenght");
+            
             passwordLenghtEl.addEventListener("input", () => {
-                const passwordLenght = passwordLenghtEl.value
-                console.log(passwordLenght);
+
+                passwordLenght = passwordLenghtEl.value
+                //console.log(passwordLenght);
+                generatePassword(); // toda vez que arrasta o input range, a função precisa ser chamada novamente 
             })
 
             generatePassword();
