@@ -57,7 +57,7 @@
     </main>
     <script>
 
-        let passwordLenght = 16;        // Variavel declarada no escopo global com o valor padrão
+        let passwordLenght = 8;        // Variavel declarada no escopo global com o valor padrão
 
         const inputEl = document.querySelector("#password");
 
@@ -101,6 +101,9 @@
 
         const copyButtonEl2 = document.querySelector("#copy-2");
         copyButtonEl2.addEventListener("click", copy); // callback
+
+        const renewEl = document.querySelector("#renew");
+        renewEl.addEventListener("click", generatePassword);
 
         generatePassword();
 
