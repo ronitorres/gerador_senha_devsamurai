@@ -25,11 +25,14 @@
         a função Math.random() gera um número de 0 a 1 
         a função substring faz um recorte da string-->
 
-        <button>Copiar senha</button>
+        <button id="copy">Copiar senha</button>
 
         <script>
 
             let passwordLenght = 16;        // Variavel declarada no escopo global com o valor padrão
+            
+            const inputEl = document.querySelector("#password");
+
 
             function generatePassword() {
                 const chars = 
@@ -43,7 +46,7 @@
                 }
 
                 //recuperando o valor do objeto
-                const inputEl = document.querySelector("#password");
+                //const inputEl = document.querySelector("#password");
                 inputEl.value = password;
 
                 //
@@ -51,17 +54,25 @@
                 //console.log(password);
             }
 
+            function copy(){
+                navigator.clipboard.writeText(inputEl.value);
+            }
+
             const passwordLenghtEl = document.querySelector("#password-lenght");
             
             passwordLenghtEl.addEventListener("input", () => {
 
-                passwordLenght = passwordLenghtEl.value
+                passwordLenght = passwordLenghtEl.value;
                 //console.log(passwordLenght);
                 generatePassword(); // toda vez que arrasta o input range, a função precisa ser chamada novamente 
             })
 
-            generatePassword();
 
+            const copyButtonEl = document.querySelector("#copy");
+            copyButtonEl.addEventListener("click", copy); // callback
+
+            generatePassword();
+            
             
             
         </script>
