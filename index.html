@@ -30,8 +30,12 @@
                 </div>
 
                 <div class="actions">
-                    <button id="copy2">C</button>
-                    <button id="renew">R</button>
+                    <button id="copy-1">
+                        <img src="copy.svg" width="42">
+                    </button>
+                    <button id="renew">
+                        <img src="renew.svg" width="42">
+                    </button>
                 </div>
 
                
@@ -48,7 +52,7 @@
         a função Math.random() gera um número de 0 a 1 
         a função substring faz um recorte da string-->
 
-        <button id="copy">Copiar senha</button>
+        <button id="copy-2">Copiar senha</button>
 
     </main>
     <script>
@@ -92,12 +96,16 @@
         })
 
 
-        const copyButtonEl = document.querySelector("#copy");
-        copyButtonEl.addEventListener("click", copy); // callback
+        const copyButtonEl1 = document.querySelector("#copy-1");
+        copyButtonEl1.addEventListener("click", copy); // callback
+
+        const copyButtonEl2 = document.querySelector("#copy-2");
+        copyButtonEl2.addEventListener("click", copy); // callback
 
         generatePassword();
 
-
+        
+        
 
     </script>
 
