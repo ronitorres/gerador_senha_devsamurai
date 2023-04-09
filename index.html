@@ -43,8 +43,16 @@
                 const inputEl = document.querySelector("#password");
                 inputEl.value = password;
 
+                //
+
                 console.log(password);
             }
+
+            const passwordLenghtEl = document.querySelector("#password-lenght");
+            passwordLenghtEl.addEventListener("input", () => {
+                const passwordLenght = passwordLenghtEl.value
+                console.log(passwordLenght);
+            })
 
             generatePassword();
 
