@@ -7,6 +7,26 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <h1>Gerador de Senha</h1>
+    <p>Utilize nosso gerador de senha online 
+        para criar uma senha forte e segura.</p>
+
+        <input type="text" name="password" id="password">
+
+        <input 
+        type="range" 
+        name="password-lenght" 
+        id="password-lenght" 
+        value="16"
+        min="4" 
+        max="64">
+
+        <!--O método floor() nivela tirando a vírgula. 
+        a função Math.random() gera um número de 0 a 1 
+        a função substring faz um recorte da string-->
+
+        <button>Copiar senha</button>
+
+       
 </body>
 </html>
