@@ -64,6 +64,7 @@
                     value="16" 
                     min="4" 
                     max="64">
+
                 </div>
                 <div class="config">
                     <label class="checkbox-container">
@@ -100,45 +101,56 @@
         
 
     </main>
+
     <script>
+      const inputEl = document.querySelector("#password")
+      const upperCaseCheckEl = document.querySelector("#uppercase-check")
+      const numberCheckEl = document.querySelector("#number-check")
+      const symbolCheckEl = document.querySelector("#symbol-check")
 
-        let passwordLength = 8;        // Variavel declarada no escopo global com o valor padrão
+      let passwordLength = 16
 
-        const inputEl = document.querySelector("#password");
+      function generatePassword() {
+        let chars = "abcdefghjkmnpqrstuvwxyz"
 
+        const upperCaseChars = "ABCDEFGHJKLMNPQRSTUVWXYZ"
+        const numberChars = "123456789"
+        const symbolChars = "?!@&*()[]"
 
-        function generatePassword() {
-            const chars =
-                "abcdefghjklmnpqrstuvwxyzABCDEFGHJKLMNPQRSTUVWXYZ123456789?!@&*()[]";
-
-            let password = "";
-
-            for (let i = 0; i < passwordLength; i++) {
-                const randomNumber = Math.floor(Math.random() * chars.length);
-                password += chars.substring(randomNumber, randomNumber + 1);
-            }
-
-            //recuperando o valor do objeto
-            //const inputEl = document.querySelector("#password");
-            inputEl.value = password;
-
-            //
-
-            //console.log(password);
+        if (upperCaseCheckEl.checked) {
+          chars += upperCaseChars
         }
 
-        function copy() {
-            navigator.clipboard.writeText(inputEl.value);
+        if (numberCheckEl.checked) {
+          chars += numberChars
         }
 
-        const passwordLengthEl = document.querySelector("#password-length");
+        if (symbolCheckEl.checked) {
+          chars += symbolChars
+        }
 
-        passwordLengthEl.addEventListener("input", () => {
+        let password = ""
 
-            passwordLength = passwordLengthEl.value;
-            //console.log(passwordLength);
-            generatePassword(); // toda vez que arrasta o input range, a função precisa ser chamada novamente 
-        })
+        for (let i = 0; i < passwordLength; i++) {
+          const randomNumber = Math.floor(Math.random() * chars.length)
+          password += chars.substring(randomNumber, randomNumber + 1)
+        }
+
+        inputEl.value = password
+      }
+
+      function copy() {
+        navigator.clipboard.writeText(inputEl.value)
+      }
+
+      const passwordLengthEl = document.querySelector("#password-length")
+      passwordLengthEl.addEventListener("input", function () {
+        passwordLength = passwordLengthEl.value
+        generatePassword()
+      })
+      upperCaseCheckEl.addEventListener("click", generatePassword)
+      numberCheckEl.addEventListener("click", generatePassword)
+      symbolCheckEl.addEventListener("click", generatePassword)
 
 
         const copyButtonEl1 = document.querySelector("#copy-1");
@@ -152,9 +164,7 @@
 
         generatePassword();
 
-
-
-
+        
     </script>
 
 
