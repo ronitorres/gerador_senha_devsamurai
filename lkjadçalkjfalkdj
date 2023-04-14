@@ -1,0 +1,22 @@
+[33m4700ad8[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m HEAD@{0}: commit: Ajustando o tamanho do texto
+[33m5728fda[m HEAD@{1}: commit: Ajustando a barra parte 4
+[33m5aebacb[m HEAD@{2}: commit: Ajustando a barra parte 3
+[33m4f84936[m HEAD@{3}: commit: Ajustando a barra parte 2
+[33mb065645[m HEAD@{4}: commit: Ajustando a barra Parte 1
+[33mbf015bb[m HEAD@{5}: commit: Maiúsculas - Minúsculas - Números e Simbolos
+[33m456684e[m HEAD@{6}: commit: Formatando o botão
+[33mb579345[m HEAD@{7}: commit: Formatando os controles
+[33m6b5907d[m HEAD@{8}: commit: Adicionando configuração
+[33m0b9b7b5[m HEAD@{9}: commit: Formatando a barra
+[33mbd9561c[m HEAD@{10}: commit: Adicionando reset de senha no botao renew
+[33m2291514[m HEAD@{11}: commit: Formatando os botões
+[33m93e9176[m HEAD@{12}: commit: Formatando o input
+[33m0db8b61[m HEAD@{13}: commit: Formatando o título
+[33mef112ce[m HEAD@{14}: commit: Iniciando configuração CSS
+[33m1d0c310[m HEAD@{15}: commit: Fazendo o botão copiar senha funcionar
+[33m4366cf4[m HEAD@{16}: commit: Incluíndo o aumento da senha no range
+[33m6a0e633[m HEAD@{17}: commit: Recuperando o objeto input range e escutando o evento input
+[33m8d4727b[m HEAD@{18}: commit: Recuperando valor do objeto para atriburi senha no input
+[33mf5e473d[m HEAD@{19}: commit: Lógica da geração de senha
+[33m5615e9a[m HEAD@{20}: commit: Pincipais elementos html criados
+[33macd43a5[m HEAD@{21}: commit (initial): Primeiro commit
