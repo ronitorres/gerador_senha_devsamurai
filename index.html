@@ -160,7 +160,7 @@
             if(percent > 69){
                 securityIndicatorBarEl.classList.remove("critical");
                 securityIndicatorBarEl.classList.remove("warning");
-                securityIndicatorBarEl.classList.remove("safe");
+                securityIndicatorBarEl.classList.add("safe");
 
             }
             else if(percent > 50){
@@ -169,9 +169,17 @@
                 securityIndicatorBarEl.classList.remove("safe");
             }
             else{
-                securityIndicatorBarEl.classList.remove("critical");
+                securityIndicatorBarEl.classList.add("critical");
                 securityIndicatorBarEl.classList.remove("warning");
                 securityIndicatorBarEl.classList.remove("safe");
+            }
+
+            if(percent >= 100){
+                securityIndicatorBarEl.classList.add("completed");
+
+            }else {
+                securityIndicatorBarEl.classList.remove("completed");
+
             }
         }
 
